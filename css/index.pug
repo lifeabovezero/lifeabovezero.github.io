@@ -1,0 +1,44 @@
+article
+  h1 Accessible Medium Style Dividers
+  p
+     | After I saw Rafal Chmiel's 
+     a(href="https://codepen.io/rafalchmiel/details/Cjacq/")
+       | pen with Medium style dividers 
+     | on the CodePen frontpage I thought to myself <q>This should be possible with simpler markup that is accessible</q>.
+  hr
+  h2 Semantic HTML
+  p Rafal states that the code for his pen is taken directly from Medium; so we shall not fault him for any errors in the markup. Medium uses a simple <code>div</code> with a <code>class</code> of <code>divider</code>. This works very well for the visual effect they are after. A sighted user will clearly see that this is the start of a new section. 
+
+  p However, this information is not communicated to assistive technologies (AT) because it has no meaning; classes don't convey any information other than <q>Hey, you can select me with CSS!</q>
+
+  p
+    | Further more, they use an anchor to markup what clearly should be a header. AT users tend to 
+    a(href="http://webaim.org/projects/screenreadersurvey4/#finding") scan a page by headings
+    | ; not anchors.
+
+  hr
+  
+  h2 Effortless Style
+  p
+    | Semantic HTML means that we don't need to depend on meaningless classes to style our content. 
+    a(href="https://twitter.com/heydonworks") Heydon Pickering
+    | coined the term Effortless Style in 2014 
+    a(href="https://vimeo.com/101718785") at CSS Day
+    | . In essense it is the separation of concerns; a best practice according to the W3C.
+
+  p
+    | You could think of it as smart CSS. In this pen we know the title of our sections are right after an <code>hr</code>—or horizontal rule. With this knowledge we can utilize the 
+    a(href="http://www.w3.org/TR/css3-selectors/#adjacent-sibling-combinators") adjacent sibling combinator
+    | to select our heading: <code>hr + h2</code>.
+    
+  hr
+  
+  h2 Alternative technique
+  p
+    | After a comment from 
+    a(href="https://codepen.io/ZCKVNS") ZCKVNS
+    | , I decided to try 
+    a(href="https://codepen.io/Michiel/details/yyyOep/") an alternative technique
+    | . The alternative uses a span to center text, instead of a <code>transform: translateX()</code>.
+
+  p If you really want to keep markup to a minimum, there is an alternative border method included in this—the one you're reading—pen. You can find it in the CSS, near the end.
