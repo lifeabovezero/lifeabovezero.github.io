@@ -45,13 +45,13 @@
   });
 
   quotes = _([
-    {
-      text: 'When I hear somebody sigh, "Life is Hard," I am always tempted to ask, "Compared to what?"',
-        author: 'Sydney Harris'
-    },
+    // {
+    //   text: 'When I hear somebody sigh, "Life is Hard," I am always tempted to ask, "Compared to what?"',
+    //     author: 'Sydney Harris'
+    // },
     {
       text: 'Thank You!',
-      author: 'A research by Ketaki Diwan.'
+      author: ''
     }
     // {
     //   text: 'Life isn’t about getting and having, it’s about giving and being.',
